@@ -30,13 +30,7 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.lab4listview);
         btn = findViewById(R.id.btn_add);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                addItem(view);
-            }
-        });
+        btn.setOnClickListener(view -> addItem(view));
 
         todoItems = new ArrayList<>();
         ItemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, todoItems);
