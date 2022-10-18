@@ -46,16 +46,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setUpListViewListener() {
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Context context = getApplicationContext();
-                Toast.makeText(context,"Item has been removed", Toast.LENGTH_LONG).show();
+        listView.setOnItemLongClickListener((adapterView, view, i, l) -> {
+            Context context = getApplicationContext();
+            Toast.makeText(context,"Item has been removed", Toast.LENGTH_LONG).show();
 
-                todoItems.remove(i);
-                ItemsAdapter.notifyDataSetChanged();
-                return true;
-            }
+            todoItems.remove(i);
+            ItemsAdapter.notifyDataSetChanged();
+            return true;
         });
     }
 
