@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private void setUpListViewListener() {
         listView.setOnItemLongClickListener((adapterView, view, i, l) -> {
             Context context = getApplicationContext();
-            Toast.makeText(context,"Item has been removed", Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"Item removed", Toast.LENGTH_LONG).show();
 
             todoItems.remove(i);
             ItemsAdapter.notifyDataSetChanged();
