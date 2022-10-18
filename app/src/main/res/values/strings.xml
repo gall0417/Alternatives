@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="btn_add">ADD</string>
+    <string name="lab4hint">Type Here</string>
+</resources>
