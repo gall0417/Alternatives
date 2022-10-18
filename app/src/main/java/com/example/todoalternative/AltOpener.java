@@ -31,4 +31,14 @@ public class AltOpener extends SQLiteOpenHelper {
 
         onCreate(db);
     }
+
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
+        //This drops the old table
+        db.execSQL( "DROP TABLE IF EXISTS " + TableName);
+
+        onCreate(db);
+    }
+
 }
