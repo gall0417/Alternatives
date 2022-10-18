@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(getApplicationContext(), "Text Cannot Be Empty.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please Enter a To Do Item.", Toast.LENGTH_LONG).show();
         }
     }
 }
