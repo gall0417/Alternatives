@@ -1,10 +1,11 @@
 package com.example.todoalternative;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class AltOpener extends SQLiteOpenHelper {
+public class AltOpener<CursorC> extends SQLiteOpenHelper {
 
     protected final static String gall0417DB = "ToDoDB";
     protected final static int VersionNo = 1;
@@ -32,6 +33,7 @@ public class AltOpener extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //This code is called if the db version number is higher than VersionNo
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
@@ -40,5 +42,4 @@ public class AltOpener extends SQLiteOpenHelper {
 
         onCreate(db);
     }
-
 }

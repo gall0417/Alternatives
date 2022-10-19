@@ -64,4 +64,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please Enter a To Do Item.", Toast.LENGTH_LONG).show();
         }
     }
+
+    String[] allColumns = {AltOpener.ColumnID, AltOpener.ToDoItem };
+
+    int idColumnindex = allColumns.getColumnIndex(AltOpener.ColumnID);
 }
